@@ -66,25 +66,25 @@ In 2024:
 ### Lieberman's Paradigm
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("liebermanarticle1.png")
+include_graphics("img/liebermanarticle1.png")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("liebermanbook1.png")
+include_graphics("img/liebermanbook1.png")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("liebermanbook2.png")
+include_graphics("img/liebermanbook2.png")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("liebermanbook3.png")
+include_graphics("img/liebermanbook3.png")
 ```
 
 ---
@@ -103,77 +103,77 @@ Probably it has something to do with unions?
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin1.jpg")
+include_graphics("img/galvin1.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin2.jpg")
+include_graphics("img/galvin2.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin3.jpg")
-```
-
-
----
-
-```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin4.jpg")
-```
-
----
-
-```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin5.jpg")
+include_graphics("img/galvin3.jpg")
 ```
 
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin6.jpg")
+include_graphics("img/galvin4.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("img/galvin5.jpg")
 ```
 
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin7.jpg")
+include_graphics("img/galvin6.jpg")
 ```
 
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin8.jpg")
+include_graphics("img/galvin7.jpg")
+```
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("img/galvin8.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin9.jpg")
+include_graphics("img/galvin9.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin10.jpg")
+include_graphics("img/galvin10.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin11.jpg")
+include_graphics("img/galvin11.jpg")
 ```
 
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("galvin12.jpg")
+include_graphics("img/galvin12.jpg")
 ```
 
 ---
@@ -193,7 +193,7 @@ Logit coefficients for the relationship range between 0.12 and 0.42.
 ### A Different Kind of Example
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("colombiamountains.jpg")
+include_graphics("img/colombiamountains.jpg")
 ```
 
 
@@ -207,28 +207,28 @@ Colombia experienced civil war through much of the 19th century
 ### A Different Kind of Example
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("laviolencia.jpg")
+include_graphics("img/laviolencia.jpg")
 ```
 
 ---
 ### A Different Kind of Example
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("colombiafarc.jpg")
+include_graphics("img/colombiafarc.jpg")
 ```
 
 ---
 ### A Different Kind of Example
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("columbia_farc_02.jpg")
+include_graphics("img/columbia_farc_02.jpg")
 ```
 
 ---
 ### A Different Kind of Example
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("bogota.jpg")
+include_graphics("img/bogota.jpg")
 ```
 
 ---
