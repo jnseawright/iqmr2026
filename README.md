@@ -2,11 +2,11 @@
 
 Multi-Method Research I (M26, June 24)
 
-8:45am - 10:15am – [Why Integrate? Roles of Qualitative Work](https://jnseawright.github.io/iqmr2026/Day-1.html#1)
+8:45am - 10:15am – [Why Integrate? Roles of Qualitative Work](https://jnseawright.github.io/iqmr2026/Day1.html#1)
 
-1:30pm - 3:00pm – [Building Cases into Regression Designs](https://jnseawright.github.io/iqmr2026/Day-1.html#1)
+1:30pm - 3:00pm – [Building Cases into Regression Designs](https://jnseawright.github.io/iqmr2026/Day1.html#1)
 
-3:30pm - 5:00pm – [Hands-On Lab: Regression, Case Studies, and Case Selection](https://jnseawright.github.io/iqmr2026/Day-1.html#1)
+3:30pm - 5:00pm – [Hands-On Lab: Regression, Case Studies, and Case Selection](https://jnseawright.github.io/iqmr2026/Day1.html#1)
 
 Multi-Method Research II (M30, June 25)
 
