@@ -746,8 +746,8 @@ dem.rf
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 2
 ## 
-##           Mean of squared residuals: 0.008926536
-##                     % Var explained: 69
+##           Mean of squared residuals: 0.008589642
+##                     % Var explained: 70.17
 ```
 
 ---
@@ -843,7 +843,7 @@ class: center, middle
 library(rpart)
 
 # Load data
-kingzeng &lt;- read.csv("data/kingzeng.csv")
+kingzeng &lt;- read.csv("https://raw.githubusercontent.com/jnseawright/iqmr2026/main/Data/kingzeng.csv")
 
 # Fit CART with a subset of predictors
 homicide.cart &lt;- rpart(homratet ~ bnkv10 + bnkv125 + bnkv34 + faocalry + gdf_gnp, 
@@ -896,17 +896,66 @@ Navigate to: `https://jnseawright.github.io/practice-of-multimethod/Chapter-3.ht
 
 ---
 
-### Part 4 (Time Permitting): Topic Model Exploration
+### Part 4 (Time Permitting): Topic Model Exploration &amp; Case Selection
 
-**Alternative Lab Activity:**
-If students have already completed the CART exercise, they can explore the January 6th topic model results (provided as pre-computed topic assignments).
+**Scenario:** You have a corpus of 1,640 DOJ documents from January 6th cases. Reading all of them is impossible. How do you choose 3–5 documents for in-depth qualitative analysis? This exercise treats the topic model as a **structured sampling frame** to identify the most informative cases.
 
-**Task:**
-- Examine the topic descriptions.
-- Select one document from a topic of interest.
-- Read the original DOJ document (links provided).
-- Discuss: How does the topic model's characterization compare to your close reading?
- research, exactly as described in the course description.
+**Materials:**
+- `jan6_topic_assignments.csv` – Document-topic probabilities (theta) for all 1,640 files.
+- `jan6_topic_labels.csv` – Top 5 keywords for each topic (interpret the labels carefully).
+- `lab_excerpts/` – A pre-selected folder of PDFs matching the `doc_id` column in the CSV.
+
+---
+
+#### Task A: Understand the Model's Vocabulary (5 min)
+Open `jan6_topic_labels.csv` and review the top words for each topic (1–8).
+
+- **Topic 4** and **Topic 6** both use "building" and "restricted/grounds" – what distinguishes them based on the other keywords? 
+- **Topic 8** includes "oath" and "members" – what kind of legal document does this suggest?
+- **Topic 7** looks like gibberish (`wkh`, `ri`, `dqg`). We will return to this in Task D.
+
+---
+
+#### Task B: Select Your Cases (10 min)
+We will use a **threshold of 0.4** to define "reasonable membership" in a topic. 
+From `jan6_topic_assignments.csv`, identify **one document** for each of the following criteria:
+
+1. **Prototypical Case:** Filter for documents where `topic_4 &gt; 0.4`. Among those, find the value closest to the **median** probability for Topic 4. Record its `doc_id`. (This is the "average" administrative document).
+2. **Extreme Case:** Find the document with the **single highest** probability in `topic_8`. Record its `doc_id`. (This is the "purest" example of violence/recruitment).
+3. **Boundary Case:** Find a document with `topic_6` that is **just above 0.4** (the lowest probability that still qualifies as membership). Record its `doc_id`. (This is the fuzzy edge of the violence category).
+
+---
+
+#### Task C: Close Reading (15 min)
+Open the PDFs in `lab_excerpts/` that correspond to your selected `doc_id`s (e.g., `12.pdf`). Read the first 2–3 pages of each.
+
+For **each** document, fill out this table:
+
+| Question | Prototypical (Topic 4) | Extreme (Topic 8) | Boundary (Topic 6) |
+| :--- | :--- | :--- | :--- |
+| **What is the defendant actually accused of doing?** (1-2 sentences) | | | |
+| **List 2 specific actions or details mentioned that *do not* appear in the topic's top-word list.** | | | |
+| **Does the text reveal the defendant's motivation or ideology?** (Quote or paraphrase) | | | |
+| **Would you assign this to the same dominant topic as the model? Why/why not?** | | | |
+
+---
+
+#### Task D: The "Gibberish" Topic (Topic 7) – Model Auditing (5 min)
+Now look at `jan6_topic_labels.csv` for Topic 7. The words appear scrambled (e.g., "wkh" instead of "the"). 
+
+- Find the **extreme** case for Topic 7 (highest probability, probably &gt; 0.9). Open that PDF. 
+- Is the text in the PDF also garbled, or is it readable? 
+- If the PDF is readable but the extracted text is garbled, what does this tell you about the **preprocessing/OCR** stage of the pipeline? 
+- **Takeaway:** Always validate your model’s inputs qualitatively. A model is only as good as the text you feed it.
+
+---
+
+#### Group Discussion &amp; Debrief (10 min)
+In pairs or small groups, share your findings. Discuss:
+
+1. **Complementary strengths:** What did the close reading reveal about the *sequence of events* or *causal mechanisms* that the topic model completely missed? 
+2. **The boundary case:** Did the fuzzy document (just over 0.4) feel like it truly belonged to that topic, or did it seem misclassified? What new words would you add to the model to better distinguish it?
+3. **Efficiency:** If you had randomly picked 3 PDFs, how likely would you have found cases as informative as the ones the model pointed you to?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
