@@ -619,7 +619,7 @@ class: center, middle
 
 ```{r, eval=FALSE, echo=TRUE}
 # Load data
-inequality <- read.csv("data/inequality.csv")
+inequality <- read.csv("https://raw.githubusercontent.com/jnseawright/practice-of-multimethod/main/data/inequality.csv")
 
 # Install and load sem package if needed
 # install.packages("sem")
@@ -647,8 +647,8 @@ summary(ineqtsls)
 ```{r, eval=FALSE, echo=TRUE}
 # Load data
 library(foreign)
-final4 <- read.dta("data/final4.dta")
-final5 <- read.dta("data/final5.dta")
+final4 <- read.dta("https://raw.githubusercontent.com/jnseawright/iqmr2026/main/Data/final4.dta")
+final5 <- read.dta("https://raw.githubusercontent.com/jnseawright/iqmr2026/main/Data/final5.dta")
 
 # Define Maimonides function
 maimonides.fun <- function(cohortsize) {
