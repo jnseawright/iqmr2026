@@ -880,6 +880,8 @@ class: center, middle
 
 **Task:** Fit a CART model and explore the tree.
 
+---
+
 ```{r, eval=FALSE, echo=TRUE}
 # Load packages
 library(rpart)
@@ -914,6 +916,8 @@ text(homicide.cart, use.n = TRUE)
 2. Identify a specific case (country-year) that falls on that path.
 3. Using internet research (Wikipedia, news archives, academic articles), investigate whether the variables on the path are plausibly *causal* or merely *correlational*.
 
+---
+
 **Guiding Questions:**
 - Is there evidence that the predictor actually causes the outcome in this case?
 - Are there alternative explanations (confounders) that the tree doesn't capture?
@@ -931,6 +935,8 @@ Navigate to: `https://jnseawright.github.io/practice-of-multimethod/Chapter-3.ht
 - Identify the causal process observations (CPOs) that would confirm or disconfirm the hypothesis.
 - Design a process-tracing test (hoop test, smoking gun, etc.) for the hypothesis.
 
+---
+
 **Deliverable:** A short memo describing:
 1. The hypothesis and its alternatives.
 2. The evidence you would seek.
@@ -941,6 +947,8 @@ Navigate to: `https://jnseawright.github.io/practice-of-multimethod/Chapter-3.ht
 ### Part 4 (Time Permitting): Topic Model Exploration & Case Selection
 
 **Scenario:** You have a corpus of 1,640 DOJ documents from January 6th cases. Reading all of them is impossible. How do you choose 3–5 documents for in-depth qualitative analysis? This exercise treats the topic model as a **structured sampling frame** to identify the most informative cases.
+
+---
 
 **Materials:**
 - `jan6_topic_assignments.csv` – Document-topic probabilities (theta) for all 1,640 files.
@@ -962,16 +970,18 @@ Open `jan6_topic_labels.csv` and review the top words for each topic (1–8).
 We will use a **threshold of 0.4** to define "reasonable membership" in a topic. 
 From `jan6_topic_assignments.csv`, identify **one document** for each of the following criteria:
 
-1. **Prototypical Case:** Filter for documents where `topic_4 > 0.4`. Among those, find the value closest to the **median** probability for Topic 4. Record its `doc_id`. (This is the "average" administrative document).
-2. **Extreme Case:** Find the document with the **single highest** probability in `topic_8`. Record its `doc_id`. (This is the "purest" example of violence/recruitment).
-3. **Boundary Case:** Find a document with `topic_6` that is **just above 0.4** (the lowest probability that still qualifies as membership). Record its `doc_id`. (This is the fuzzy edge of the violence category).
+1. **Prototypical Case:** Filter for documents where `topic_4 > 0.4`. Among those, find the value closest to the **median** probability for Topic 4. Record its `doc_id`. (This is the "average" document).
+2. **Extreme Case:** Find the document with the **single highest** probability in `topic_8`. Record its `doc_id`. (This is the "purest" example for this category).
+3. **Boundary Case:** Find a document with `topic_6` that is **just above 0.4** (the lowest probability that still qualifies as membership). Record its `doc_id`. (This is the fuzzy edge of the category).
 
 ---
 
 #### Task C: Close Reading (15 min)
-Open the PDFs in `lab_excerpts/` that correspond to your selected `doc_id`s (e.g., `12.pdf`). Read the first 2–3 pages of each.
+Open the PDFs in `lab_excerpts/` that correspond to your selected `doc_id`s (e.g., `12.pdf`). Skim each, finding the parts that are unique and meaningful (legal documents have a lot of repetition and boilerplate).
 
-For **each** document, fill out this table:
+For **each** document, fill out the table on the following page.
+
+---
 
 | Question | Prototypical (Topic 4) | Extreme (Topic 8) | Boundary (Topic 6) |
 | :--- | :--- | :--- | :--- |
@@ -988,7 +998,6 @@ Now look at `jan6_topic_labels.csv` for Topic 7. The words appear scrambled (e.g
 - Find the **extreme** case for Topic 7 (highest probability, probably > 0.9). Open that PDF. 
 - Is the text in the PDF also garbled, or is it readable? 
 - If the PDF is readable but the extracted text is garbled, what does this tell you about the **preprocessing/OCR** stage of the pipeline? 
-- **Takeaway:** Always validate your model’s inputs qualitatively. A model is only as good as the text you feed it.
 
 ---
 
