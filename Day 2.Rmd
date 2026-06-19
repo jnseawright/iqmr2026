@@ -82,7 +82,7 @@ Each requires **different qualitative strategies** to validate assumptions.
    - No discretion in assignment, or the relevant information is unavailable/unused.
 2. The randomized treatment has the same effect as non-randomized treatment would have.
 
-**Example:** Snow on Cholera (natural variation in water source).
+**Example:** Snow on Cholera (variation in water source).
 
 ---
 
@@ -95,8 +95,8 @@ Each requires **different qualitative strategies** to validate assumptions.
 
 ### Example: Vietnam War Draft Lottery
 
-- **Natural Experiment:** Draft lottery randomly assigned birthdates to priority numbers.
-- **Treatment:** Draft eligibility (instrument for military service).
+- **Natural Experiment:** Draft lottery randomly assigned priority numbers to specific birthdates.
+- **Treatment:** Draft eligibility (proxy for military service).
 - **Outcome:** Earnings, education, mortality.
 
 ---
@@ -178,7 +178,7 @@ include_graphics("img/settlers1.png")
 - $X$ Institutions (protection of property rights)
 - $Y$ GDP per capita
 
-**Qualitative challenge:** Are there cases where settler mortality affected GDP through causal pathways other than institutions? Why?
+**Qualitative challenge:** Are there cases where settler mortality affected GDP through causal pathways other than institutions? Can we find evidence?
 
 ---
 
@@ -508,7 +508,7 @@ In selecting among these (and others), for use in an emotions-and-politics exper
 
 ### The Limits of Experimental Process Tracing
 
-- We still won't fully test mediation theories --- as we said on the first day, the assumptions for such a test are severe.
+- We still won't fully test mediation theories; the assumptions for such a test are severe.
 - It is probably more useful to use these techniques as modes of hypothesis generation, and as ways of testing other assumptions we've discussed above.
 
 ---

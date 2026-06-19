@@ -293,16 +293,6 @@ include_graphics("img/dojtopics.png")
 
 ---
 
-**Topics identified:**
-- Topic 3 & 7: Judicial procedural documents.
-- Topic 2: Plea bargains.
-- Topic 5: Charge sheets.
-- Topic 1: Stipulations of fact.
-- Topic 4: FBI affidavits.
-- Topic 6 & 8: Statements of offense (varying degrees of violence).
-
----
-
 ### January 6th: Topic Prevalence
 
 | Topic                     | Average Membership |
@@ -388,7 +378,7 @@ class: center, middle
 
 **Can ML help with concept formation?**
 
-Yes. ML can analyze *how scholars actually use a concept* across thousands of texts, revealing latent dimensions of meaning.
+ML can analyze *how scholars actually use a concept* across thousands of texts, revealing dimensions of meaning.
 
 ---
 ### What Makes a Good Concept?
@@ -532,9 +522,13 @@ model <- '
   RWR =~ RWR1 + RWR2 + RWR3 + RWR4 + RWR5 + RWR6 + RWR7 + RWR8
   GEX =~ GEX1 + GEX2 + GEX3 + GEX4 + GEX5
 '
+```
 
+---
+
+```{r, eval=TRUE, echo=FALSE}
 # Create a simple diagram
-semPaths(
+extremepic <- semPaths(
   semPlotModel_lavaanModel(model),
   what = "path",
   whatLabels = "none",
@@ -555,6 +549,13 @@ semPaths(
   )
 )
 ```
+
+---
+
+```{r, eval=TRUE, echo=FALSE}
+extremepic
+```
+
 ---
 
 ## Jungkunz et al.: Three Scales

@@ -269,16 +269,6 @@ Just for fun, why "Sanctimoniously"?
 
 ---
 
-**Topics identified:**
-- Topic 3 &amp; 7: Judicial procedural documents.
-- Topic 2: Plea bargains.
-- Topic 5: Charge sheets.
-- Topic 1: Stipulations of fact.
-- Topic 4: FBI affidavits.
-- Topic 6 &amp; 8: Statements of offense (varying degrees of violence).
-
----
-
 ### January 6th: Topic Prevalence
 
 | Topic                     | Average Membership |
@@ -356,7 +346,7 @@ class: center, middle
 
 **Can ML help with concept formation?**
 
-Yes. ML can analyze *how scholars actually use a concept* across thousands of texts, revealing latent dimensions of meaning.
+ML can analyze *how scholars actually use a concept* across thousands of texts, revealing dimensions of meaning.
 
 ---
 ### What Makes a Good Concept?
@@ -490,7 +480,57 @@ print(fa_results$loadings, cutoff = 0.3)
 
 ---
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+```
+## From		To	Weight
+## 20 	 --&gt; 	 1 	 1 
+## 20 	 --&gt; 	 2 	 1 
+## 20 	 --&gt; 	 3 	 1 
+## 20 	 --&gt; 	 4 	 1 
+## 20 	 --&gt; 	 5 	 1 
+## 20 	 --&gt; 	 6 	 1 
+## 21 	 --&gt; 	 7 	 1 
+## 21 	 --&gt; 	 8 	 1 
+## 21 	 --&gt; 	 9 	 1 
+## 21 	 --&gt; 	 10 	 1 
+## 21 	 --&gt; 	 11 	 1 
+## 21 	 --&gt; 	 12 	 1 
+## 21 	 --&gt; 	 13 	 1 
+## 21 	 --&gt; 	 14 	 1 
+## 22 	 --&gt; 	 15 	 1 
+## 22 	 --&gt; 	 16 	 1 
+## 22 	 --&gt; 	 17 	 1 
+## 22 	 --&gt; 	 18 	 1 
+## 22 	 --&gt; 	 19 	 1 
+## 1 	 --&gt; 	 1 	 1 
+## 2 	 --&gt; 	 2 	 1 
+## 3 	 --&gt; 	 3 	 1 
+## 4 	 --&gt; 	 4 	 1 
+## 5 	 --&gt; 	 5 	 1 
+## 6 	 --&gt; 	 6 	 1 
+## 7 	 --&gt; 	 7 	 1 
+## 8 	 --&gt; 	 8 	 1 
+## 9 	 --&gt; 	 9 	 1 
+## 10 	 --&gt; 	 10 	 1 
+## 11 	 --&gt; 	 11 	 1 
+## 12 	 --&gt; 	 12 	 1 
+## 13 	 --&gt; 	 13 	 1 
+## 14 	 --&gt; 	 14 	 1 
+## 15 	 --&gt; 	 15 	 1 
+## 16 	 --&gt; 	 16 	 1 
+## 17 	 --&gt; 	 17 	 1 
+## 18 	 --&gt; 	 18 	 1 
+## 19 	 --&gt; 	 19 	 1
+```
+
 ---
 
 ## Jungkunz et al.: Three Scales
@@ -707,7 +747,7 @@ plot(dem.cart)
 text(dem.cart, use.n=TRUE)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-27-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-29-1.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 ### More current tools than CART for Multi-Method Research
@@ -746,8 +786,8 @@ dem.rf
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 2
 ## 
-##           Mean of squared residuals: 0.008988809
-##                     % Var explained: 68.79
+##           Mean of squared residuals: 0.008793539
+##                     % Var explained: 69.46
 ```
 
 ---
@@ -763,7 +803,7 @@ dem.mindepth &lt;- min_depth_distribution(dem.rf)
 plot_min_depth_distribution(dem.mindepth)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-31-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-33-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -771,7 +811,7 @@ plot_min_depth_distribution(dem.mindepth)
 plot_min_depth_interactions(dem.rf)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-32-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-34-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -906,6 +946,8 @@ Navigate to: `https://jnseawright.github.io/practice-of-multimethod/Chapter-3.ht
 
 **Scenario:** You have a corpus of 1,640 DOJ documents from January 6th cases. Reading all of them is impossible. How do you choose 3–5 documents for in-depth qualitative analysis? This exercise treats the topic model as a **structured sampling frame** to identify the most informative cases.
 
+---
+
 **Materials:**
 - `jan6_topic_assignments.csv` – Document-topic probabilities (theta) for all 1,640 files.
 - `jan6_topic_labels.csv` – Top 5 keywords for each topic (interpret the labels carefully).
@@ -926,16 +968,18 @@ Open `jan6_topic_labels.csv` and review the top words for each topic (1–8).
 We will use a **threshold of 0.4** to define "reasonable membership" in a topic. 
 From `jan6_topic_assignments.csv`, identify **one document** for each of the following criteria:
 
-1. **Prototypical Case:** Filter for documents where `topic_4 &gt; 0.4`. Among those, find the value closest to the **median** probability for Topic 4. Record its `doc_id`. (This is the "average" administrative document).
-2. **Extreme Case:** Find the document with the **single highest** probability in `topic_8`. Record its `doc_id`. (This is the "purest" example of violence/recruitment).
-3. **Boundary Case:** Find a document with `topic_6` that is **just above 0.4** (the lowest probability that still qualifies as membership). Record its `doc_id`. (This is the fuzzy edge of the violence category).
+1. **Prototypical Case:** Filter for documents where `topic_4 &gt; 0.4`. Among those, find the value closest to the **median** probability for Topic 4. Record its `doc_id`. (This is the "average" document).
+2. **Extreme Case:** Find the document with the **single highest** probability in `topic_8`. Record its `doc_id`. (This is the "purest" example for this category).
+3. **Boundary Case:** Find a document with `topic_6` that is **just above 0.4** (the lowest probability that still qualifies as membership). Record its `doc_id`. (This is the fuzzy edge of the category).
 
 ---
 
 #### Task C: Close Reading (15 min)
-Open the PDFs in `lab_excerpts/` that correspond to your selected `doc_id`s (e.g., `12.pdf`). Read the first 2–3 pages of each.
+Open the PDFs in `lab_excerpts/` that correspond to your selected `doc_id`s (e.g., `12.pdf`). Skim each, finding the parts that are unique and meaningful (legal documents have a lot of repetition and boilerplate).
 
-For **each** document, fill out this table:
+For **each** document, fill out the table on the following page.
+
+---
 
 | Question | Prototypical (Topic 4) | Extreme (Topic 8) | Boundary (Topic 6) |
 | :--- | :--- | :--- | :--- |
@@ -952,7 +996,6 @@ Now look at `jan6_topic_labels.csv` for Topic 7. The words appear scrambled (e.g
 - Find the **extreme** case for Topic 7 (highest probability, probably &gt; 0.9). Open that PDF. 
 - Is the text in the PDF also garbled, or is it readable? 
 - If the PDF is readable but the extracted text is garbled, what does this tell you about the **preprocessing/OCR** stage of the pipeline? 
-- **Takeaway:** Always validate your model’s inputs qualitatively. A model is only as good as the text you feed it.
 
 ---
 
