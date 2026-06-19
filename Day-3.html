@@ -480,56 +480,7 @@ print(fa_results$loadings, cutoff = 0.3)
 
 ---
 
-
-
----
-
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
-
----
-
-
-```
-## From		To	Weight
-## 20 	 --&gt; 	 1 	 1 
-## 20 	 --&gt; 	 2 	 1 
-## 20 	 --&gt; 	 3 	 1 
-## 20 	 --&gt; 	 4 	 1 
-## 20 	 --&gt; 	 5 	 1 
-## 20 	 --&gt; 	 6 	 1 
-## 21 	 --&gt; 	 7 	 1 
-## 21 	 --&gt; 	 8 	 1 
-## 21 	 --&gt; 	 9 	 1 
-## 21 	 --&gt; 	 10 	 1 
-## 21 	 --&gt; 	 11 	 1 
-## 21 	 --&gt; 	 12 	 1 
-## 21 	 --&gt; 	 13 	 1 
-## 21 	 --&gt; 	 14 	 1 
-## 22 	 --&gt; 	 15 	 1 
-## 22 	 --&gt; 	 16 	 1 
-## 22 	 --&gt; 	 17 	 1 
-## 22 	 --&gt; 	 18 	 1 
-## 22 	 --&gt; 	 19 	 1 
-## 1 	 --&gt; 	 1 	 1 
-## 2 	 --&gt; 	 2 	 1 
-## 3 	 --&gt; 	 3 	 1 
-## 4 	 --&gt; 	 4 	 1 
-## 5 	 --&gt; 	 5 	 1 
-## 6 	 --&gt; 	 6 	 1 
-## 7 	 --&gt; 	 7 	 1 
-## 8 	 --&gt; 	 8 	 1 
-## 9 	 --&gt; 	 9 	 1 
-## 10 	 --&gt; 	 10 	 1 
-## 11 	 --&gt; 	 11 	 1 
-## 12 	 --&gt; 	 12 	 1 
-## 13 	 --&gt; 	 13 	 1 
-## 14 	 --&gt; 	 14 	 1 
-## 15 	 --&gt; 	 15 	 1 
-## 16 	 --&gt; 	 16 	 1 
-## 17 	 --&gt; 	 17 	 1 
-## 18 	 --&gt; 	 18 	 1 
-## 19 	 --&gt; 	 19 	 1
-```
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -747,7 +698,7 @@ plot(dem.cart)
 text(dem.cart, use.n=TRUE)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-29-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-27-1.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 ### More current tools than CART for Multi-Method Research
@@ -786,8 +737,8 @@ dem.rf
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 2
 ## 
-##           Mean of squared residuals: 0.008793539
-##                     % Var explained: 69.46
+##           Mean of squared residuals: 0.00871944
+##                     % Var explained: 69.72
 ```
 
 ---
@@ -803,7 +754,7 @@ dem.mindepth &lt;- min_depth_distribution(dem.rf)
 plot_min_depth_distribution(dem.mindepth)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-33-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-31-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -811,7 +762,7 @@ plot_min_depth_distribution(dem.mindepth)
 plot_min_depth_interactions(dem.rf)
 ```
 
-&lt;img src="Day-3_files/figure-html/unnamed-chunk-34-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="Day-3_files/figure-html/unnamed-chunk-32-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 
 ---

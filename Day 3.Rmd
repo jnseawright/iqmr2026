@@ -522,13 +522,8 @@ model <- '
   RWR =~ RWR1 + RWR2 + RWR3 + RWR4 + RWR5 + RWR6 + RWR7 + RWR8
   GEX =~ GEX1 + GEX2 + GEX3 + GEX4 + GEX5
 '
-```
-
----
-
-```{r, eval=TRUE, echo=FALSE}
 # Create a simple diagram
-extremepic <- semPaths(
+semPaths(
   semPlotModel_lavaanModel(model),
   what = "path",
   whatLabels = "none",
@@ -548,12 +543,6 @@ extremepic <- semPaths(
     "Left-Wing\nRadicalism", "Right-Wing\nRadicalism", "General\nExtremism"
   )
 )
-```
-
----
-
-```{r, eval=TRUE, echo=FALSE}
-extremepic
 ```
 
 ---
